@@ -23,29 +23,49 @@ data='enter account number'
   ngOnInit(): void {
   }
 
-login(){
-   var acno=this.acno
-   var psw = this.psw
-   var userDetails=this.userDetails
+// login(){
+//    var acno=this.acno
+//    var psw = this.psw
+//    var userDetails=this.userDetails
   
-   if(acno in userDetails){
-       if(psw==userDetails[acno]['password']){
-        alert('Login success')
-       }
-       else{
-        alert('Incorrect password')
-       }
-   }
-   else{
-      alert('user not exists')
-   }
+//    if(acno in userDetails){
+//        if(psw==userDetails[acno]['password']){
+//         alert('Login success')
+//        }
+//        else{
+//         alert('Incorrect password')
+//        }
+//    }
+//    else{
+//       alert('user not exists')
+//    }
+
+// }
+
+login(a:any,b:any){
+  var acno=a.value
+  var psw = b.value
+  var userDetails=this.userDetails
+ 
+  if(acno in userDetails){
+      if(psw==userDetails[acno]['password']){
+       alert('Login success')
+      }
+      else{
+       alert('Incorrect password')
+      }
+  }
+  else{
+     alert('user not exists')
+  }
 
 }
-acnoChange(event:any){
-  this.acno=event.target.value
-}
-pswChange(event:any){
-  this.psw=event.target.value
-}
+
+// acnoChange(event:any){
+//   this.acno=event.target.value
+// }
+// pswChange(event:any){
+//   this.psw=event.target.value
+// }
 
 }
