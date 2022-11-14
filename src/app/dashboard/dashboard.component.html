@@ -1,0 +1,82 @@
+<div><h3 class="text-center">Welcome {{user}}</h3></div>
+
+<div class="p-3 ms-4 bg-white w-25" style="border-radius:20px;"><a style="text-decoration:none ;" routerLink="/transaction">View Transaction History</a></div>
+
+
+<h1 style="text-align:center">Deposit & Withdraw Money</h1>
+<hr>
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-5 mt-4 ms-1">
+        <div class="login">
+            <h1 class="text-center">DEPOSIT FORM</h1>
+            <form (ngSubmit)="deposit()">
+                <div class="form-group">
+                    <label class="form-label" for="acno">Account Number</label>
+                    <input [(ngModel)]="acno" name="accno1" class="form-control" type="text" id="acno" required >
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="user">Password</label>
+                    <input [(ngModel)]="psw" name="psw" class="form-control" type="text" id="psw" required >
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="password">Amount</label>
+                    <input [(ngModel)]="amnt" class="form-control" name="amnt" type="password" id="amnt" required>
+                </div>
+                
+                <input type="submit" class="btn btn-success w-100" value="DEPOSIT">
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-3 p-4 me-2">
+        <div class="login">
+            <h1 class="text-center">WITHDRAW FORM</h1>
+            
+            <form (ngSubmit)="withdraw()">
+                <div class="form-group">
+                    <label class="form-label" for="acno">Account Number</label>
+                    <input [(ngModel)]="acno1" name="acno1" class="form-control" type="text" id="acno1" required >
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="user">Password</label>
+                    <input [(ngModel)]="psw1" name="psw1" class="form-control" type="text" id="psw1" required >
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="password">Amount</label>
+                    <input [(ngModel)]="amnt1" class="form-control" name="amnt1" type="password" id="amnt1" required>
+                </div>
+                
+                <input type="submit" class="btn btn-success w-100" value="WITHDRAW">
+            </form>
+        </div> 
+    </div>
+    <div class="col-lg-3"></div>
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="login">
+    <h1 class="text-center">DEPOSIT FORM</h1>
+    
+    <form>
+        <div class="form-group">
+            <label class="form-label" for="acno">Account Number</label>
+            <input [(ngModel)]="acno" name="acno" class="form-control" type="text" id="acno" required >
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="user">Password</label>
+            <input [(ngModel)]="psw" name="user" class="form-control" type="text" id="user" required >
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="password">Amount</label>
+            <input [(ngModel)]="amnt" class="form-control" name="amnt" type="password" id="amnt" required>
+        </div>
+        
+        <input type="submit" class="btn btn-success w-100" value="REGISTER">
+    </form>
+</div>  -->

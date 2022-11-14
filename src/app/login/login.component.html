@@ -2,21 +2,21 @@
 <div class="login">
     <h1 class="text-center">LOGIN FORM</h1>
 
-    <form action="">
+    <form (ngSubmit)="login()">
         <div class="form-group">
             <label class="form-label" for="acno">Account Number</label>
-            <input #acno name="acno" class="form-control" type="text" id="acno" [placeholder]="data" required >
+            <input [(ngModel)]="acno" name="acno" class="form-control" type="text" id="acno" [placeholder]="data" required >
         </div>
         <div class="form-group">
             <label class="form-label" for="password">Password</label>
-            <input #psw class="form-control" type="text" id="psw" required>
+            <input [(ngModel)]="psw" class="form-control" name="psw" type="text" id="psw" required>
         </div>
         <div class="form-group form-check">
             <input  type="checkbox" id="check">
             <label  for="cheeck">Remember me</label>
         </div>
         <div class="pass"><a href="#">Forgot Password?</a></div>
-        <input type="submit" (click)="login(acno,psw)" class="btn btn-success w-100" value="LOGIN">
-        <div class="signup-link">Not a member? <a class="a" href="#">Register now</a></div>
+        <input type="submit" class="btn btn-success w-100" value="LOGIN">
+        <div class="signup-link">Not a member? <a class="a" routerLink="register">Register now</a></div>
     </form>
 </div>
