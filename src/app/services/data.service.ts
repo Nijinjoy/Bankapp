@@ -36,7 +36,7 @@ export class DataService {
     this.currentuser=userDetails[acno]['username']
 
     if(acno in userDetails){
-        if(psw==userDetails[acno]["password"]){
+        if(psw==userDetails[acno]['password']){
           this.currentacno=acno
          return true
         }

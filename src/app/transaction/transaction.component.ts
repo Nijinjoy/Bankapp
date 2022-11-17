@@ -9,14 +9,13 @@ import { DataService } from '../services/data.service';
 export class TransactionComponent implements OnInit {
 
 
-  useracno: any;
+useracno: any;
 transaction:any
 
   constructor(private ds:DataService) {
     this.useracno=this.ds.currentacno
     this.transaction = this.ds.getTransaction(this.useracno)
 
-    
 
    }
 
